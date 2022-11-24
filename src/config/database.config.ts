@@ -2,7 +2,7 @@ import 'dotenv/config';
 import UserEntity from '../model/user/user.entity';
 import { DataSourceOptions } from 'typeorm';
 import PostEntity from '../model/post/post.entity';
-console.log(__dirname )
+console.log(__dirname)
 const databaseConfig: DataSourceOptions = {
   name: 'default',
   migrationsRun: true,
@@ -15,7 +15,7 @@ const databaseConfig: DataSourceOptions = {
   entities: [PostEntity, UserEntity],
   logging: true,
   migrationsTableName: "migrations",
-  migrations: [__dirname + '/database/migrations/*{.ts,.js}'],
-  synchronize: false,
+  migrations: [__dirname + '/../database/migrations/*{.ts,.js}'],
+  synchronize: true,
 };
 export default databaseConfig;
