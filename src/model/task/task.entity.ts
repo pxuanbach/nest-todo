@@ -2,17 +2,17 @@
 import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
  
 @Entity()
-class PostEntity {
+class Task {
   @PrimaryGeneratedColumn('identity', {
     generatedIdentity: 'ALWAYS',
   })
   id: number;
  
   @Column()
-  title: string;
- 
-  @Column()
   content: string;
+
+  @Column()
+  status: string;
 }
  
-export default PostEntity;
+export default Task;

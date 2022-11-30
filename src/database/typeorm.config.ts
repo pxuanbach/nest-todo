@@ -4,6 +4,7 @@ import {
   TypeOrmModuleOptions,
 } from '@nestjs/typeorm';
 import databaseConfig from '../config/database.config';
+
 export const typeOrmConfig: TypeOrmModuleOptions = databaseConfig;
 export const typeOrmAsyncConfig: TypeOrmModuleAsyncOptions = {
   imports: [ConfigModule],
